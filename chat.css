@@ -1,0 +1,5 @@
+.main-content { margin:0% 5%; font-size: 1em; text-shadow: none; }
+.namelite { background: #45B39D; color:white; border-radius: 5px; padding: 2px 6px; }
+.align-left { text-align: left; }
+#chat { padding:0 10px; height:350px; overflow:auto; background:white; border-radius: 5px; }
+#msg { color: maroon!important; }
