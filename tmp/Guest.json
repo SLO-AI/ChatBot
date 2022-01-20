@@ -3,25 +3,28 @@
   "locale": "nl",
   "data": [
     {
-      "intent": "agent.blij",
+      "intent": "agent.waarispakketje",
       "utterances": [
-        "Ik ben blij",
-        "Ik ben vrolijk"
+        "Waar is mijn pakketje?",
+	"Waar is mijn pakketje",
+        "Komt mijn pakketje nog?",
+	"Wacht op mijn pakketje"
       ],
       "answers": [
-        "Mooi",
-        "Fijn"
+        "Als je inlogt, kan ik zien welke bestelling je bedoelt. Wil je inloggen op je bol.com account?",
+        "Zou je willen inloggen, dan kan ik zien welk pakketje je bedoelt"
       ]
     },
     {
-      "intent": "agent.droef",
+      "intent": "agent.retourneren",
       "utterances": [
-        "Ik ben verdrietig",
-        "Ik ben down"
+        "Ik wil iets retourneren",
+        "Ik wil iets terugsturen",
+	"Ik wil iets terug sturen"
       ],
       "answers": [
-        "Jammer",
-        "Naar"
+        "Artikelen terugsturen is bijna altijd mogelijk. Als je inlogt, kijk ik graag met je mee. Wil je inloggen op je bol.com account?",
+        "Zou je willen inloggen, dan kunnen we samen verder kijken hoe je je pakketje terug kunt sturen"
       ]
     }
    ]
