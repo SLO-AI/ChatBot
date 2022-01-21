@@ -34,13 +34,26 @@ const ChatRoom = function () {
         chat.scrollTop = chat.scrollHeight;
     }
 
+    const sanitize = (string) => {
+        const map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#x27;',
+            "/": '&#x2F;',
+        };
+        const reg = /[&<>"'/]/ig;
+        return string.replace(reg, (match)=>(map[match]));
+    }
+
     this.addMessage = (name, message) => {
-        chat.appendChild(createMessage(name, message));
+        chat.appendChild(createMessage(name, sanitize(message)));
         scrollDown();
     };
 
     this.addReply = (name, message) => {
-        chat.appendChild(createMessage(name, message, false));
+        chat.appendChild(createMessage(name, sanitize(message), false));
         scrollDown();
     }
 
