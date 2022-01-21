@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+
+    <script src='js/bundle.js'></script>
+    <script src="js/bot.js" type="application/javascript"></script>
+    <script src="js/chatRoom.js" type="application/javascript"></script>
+    <script src="js/client.js" type="application/javascript"></script>
+</head>
+<body>
+<div id="page">
+    <div id="settings">
+        <label for="upload">Laad bot</label><input type="file" id="upload">
+    </div>
+
+    <div id="content">
+        <div class="main-content">
+
+            <p>Your Chat Room : <span class="name-lite" id="room"></span></p>
+            <label for="name">Your name: </label><input type="text" id="name">
+
+            <div id="chat"></div>
+
+            <div>
+                <label for="message-input"></label><input data-clear-btn="true" id="message-input" type="text">
+                <button id="enter">Enter</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
