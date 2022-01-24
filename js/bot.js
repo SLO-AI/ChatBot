@@ -3,11 +3,9 @@ const {containerBootstrap, Nlp, LangNl, fs} = window.nlpjs;
 const Bot = function () {
     let container = null;
     let nlp = null;
-    let corpusFile = null;
 
-    this.setCorpus = async function (file) {
-        corpusFile = file;
-        await nlp.addCorpus(corpusFile);
+    this.setCorpus = async function (dict) {
+        await nlp.addCorpus(dict);
     };
 
     this.trainCorpus =  async function () {

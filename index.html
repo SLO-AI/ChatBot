@@ -25,11 +25,13 @@
             <p>Your Chat Room : <span class="name-lite" id="room"></span></p>
             <label for="name">Your name: </label><input type="text" id="name">
 
-            <div id="chat"></div>
-
-            <div>
-                <label for="message-input"></label><input data-clear-btn="true" id="message-input" type="text">
-                <button id="enter">Enter</button>
+            <div id="chat-window">
+                <div id="chat-header">Maxima</div>
+                <div id="chat"></div>
+                <div id="chat-footer">
+                    <label for="chat-input"></label><input data-clear-btn="true" id="chat-input" type="text">
+                    <button id="chat-enter">Enter</button>
+                </div>
             </div>
         </div>
     </div>

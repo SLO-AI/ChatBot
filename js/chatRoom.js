@@ -3,14 +3,14 @@ const ChatRoom = function () {
     const nameElement = document.getElementById("name");
     const chat = document.getElementById("chat");
 
-    const createMessage = (name,message, me=true) => {
+    const createMessage = (name, message, me=true) => {
         const el = document.createElement("div");
         const userNameElement = document.createElement("div");
         const timeElement = document.createElement("div");
         const messageElement = document.createElement("div");
 
-
-        timeElement.innerHTML = new Date().toLocaleTimeString("nl-NL", {hour: '2-digit', minute:'2-digit'});
+        timeElement.innerHTML = new Date().toLocaleTimeString("nl-NL",
+            {hour: '2-digit', minute:'2-digit'});
         timeElement.className = "time";
 
         messageElement.innerHTML = message;
@@ -44,7 +44,8 @@ const ChatRoom = function () {
             "/": '&#x2F;',
         };
         const reg = /[&<>"'/]/ig;
-        return string.replace(reg, (match)=>(map[match]));
+        string.replace(reg, (match) => (map[match]));
+        return string;
     }
 
     this.addMessage = (name, message) => {

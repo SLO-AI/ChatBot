@@ -1,12 +1,14 @@
 const load = function() {
     const chatroom = new ChatRoom();
     const bot = new Bot();
-    const msg = document.getElementById("message-input");
+    const msg = document.getElementById("chat-input");
 
     const loadCorpus = (file) => {
         console.log("Set corpus");
+
         bot.setCorpus(file).then(() => {
             console.log("training corpus");
+
             bot.trainCorpus().then(() => {
                 console.log("Done!");
             });
@@ -38,12 +40,12 @@ const load = function() {
         sendMessage();
     });
 
-    fetch("/chatdata/bol.json").then((r) => {
+    fetch("./chatdata/bol.json").then((r) => {
         r.json().then((r) => {
             loadCorpus(r);
-        })
+        });
 
-    })
+    });
 };
 
 window.onload = load;

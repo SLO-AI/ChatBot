@@ -9,7 +9,12 @@
 
     --name-color: #45B39D;
 
+    --chat-background: #f1f1f1;
+    --chat-input-background: #ffffff;
+
     --text-area-width: 585px;
+
+    --border-radius: 10px;
 }
 
 html {
@@ -51,7 +56,7 @@ body {
     width: fit-content;
     max-width: 66%;
 
-    box-shadow: 0 0 2rem rgba(0,0,0, 0.3), 0 1rem 1rem -1rem rgba(0,0,0, 0.3);
+    box-shadow: 0 0 1rem rgba(0,0,0, 0.3), 0 1rem 1rem -1rem rgba(0,0,0, 0.3);
     flex-shrink: 0;
 }
 
@@ -100,29 +105,58 @@ body {
 .message.typing.typing-2 { animation: typing 3s 250ms infinite }
 .message.typing.typing-3 { animation: typing 3s 500ms infinite }
 
+#chat-header {
+    padding: 10px 10px;
+    /*background: var(--chat-input-background);*/
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: #0f0f0f;
+}
+
+#chat-window {
+    background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+    width: 420px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+}
+
 #chat {
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
+    margin: 0 10px;
     height: 350px;
     overflow: auto;
-    background: white;
-    border-radius: 5px 5px 0 0;
-    width: 420px;
-    margin: 0;
+    /*width: 100%;*/
+
+    /*background-color: #8EC5FC;*/
+    /*background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);*/
+    /*background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);*/
+    /*background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);*/
 }
 
-#message-input {
-    all: unset;
-    background: white;
-    width: 420px;
-    padding: 10px 10px;
-    margin: 0;
-    border-radius: 0 0 5px 5px;
+#chat-footer {
+    /*width: 100%;*/
+    padding: 10px;
+    background: var(--chat-input-background);
+
 }
 
-#enter {
+#chat-input {
     all: unset;
+    /*background: var(--chat-input-background);*/
+    /*width: 420px;*/
+    width: 85%;
+    /*height: 100%;*/
+    /*padding: 10px 10px;*/
+    /*margin: 0;*/
+    /*border-radius: 0 0 var(--border-radius) var(--border-radius);*/
+}
+
+#chat-enter {
+    all: unset;
+    /*position: absolute;*/
+    /*margin-left: -50px;*/
 }
 
 /*#msg {*/
