@@ -35,6 +35,10 @@ const ChatRoom = function () {
     }
 
     const sanitize = (string) => {
+        if (string == null || string == undefined) {
+            return string;
+        }
+
         const map = {
             '&': '&amp;',
             '<': '&lt;',
@@ -44,7 +48,7 @@ const ChatRoom = function () {
             "/": '&#x2F;',
         };
         const reg = /[&<>"'/]/ig;
-        string.replace(reg, (match) => (map[match]));
+        string.replace(/[-[/\]{}()*+?.,\\^$|#\s]/g, '\\$&');
         return string;
     }
 

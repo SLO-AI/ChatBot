@@ -35,7 +35,7 @@ const load = function() {
         }
     });
 
-    const enter = document.getElementById("enter");
+    const enter = document.getElementById("chat-enter");
     enter.addEventListener("click", () => {
         sendMessage();
     });
