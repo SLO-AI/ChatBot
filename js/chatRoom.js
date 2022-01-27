@@ -1,6 +1,6 @@
 const ChatRoom = function () {
-    const roomElement = document.getElementById("room");
-    const nameElement = document.getElementById("name");
+    // const roomElement = document.getElementById("room");
+    // const nameElement = document.getElementById("name");
     const chat = document.getElementById("chat");
 
     const createMessage = (name, message, me=true) => {
@@ -35,19 +35,10 @@ const ChatRoom = function () {
     }
 
     const sanitize = (string) => {
-        if (string == null || string == undefined) {
+        if (string == null) {
             return string;
         }
 
-        const map = {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#x27;',
-            "/": '&#x2F;',
-        };
-        const reg = /[&<>"'/]/ig;
         string.replace(/[-[/\]{}()*+?.,\\^$|#\s]/g, '\\$&');
         return string;
     }
