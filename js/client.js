@@ -46,6 +46,18 @@ const load = function() {
         });
 
     });
+
+    new DropArea(document.getElementById("file-drop"), (files) => {
+        console.log(files);
+        const fr = new FileReader()
+        fr.onload=function(){
+            const r = JSON.parse(fr.result)
+            loadCorpus(r);
+        }
+
+        fr.readAsText(files[0]);
+
+    });
 };
 
 window.onload = load;
