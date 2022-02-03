@@ -123,11 +123,11 @@ header h1 {
 }
 
 #chat-header {
-    padding: 20px 20px;
+    padding: 15px 20px;
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0px 5px 2px #444444;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -148,7 +148,7 @@ header h1 {
 #chat-input {
     all: unset;
     flex-grow: 1;
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 10px;
     /*width: 85%;*/
 }
