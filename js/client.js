@@ -21,11 +21,11 @@ const load = function() {
         }
         const content = msg.value;
 
-        chatroom.addMessage("bla", content);
+        chatroom.addMessage(content);
         msg.value = null;
 
         bot.getReply(content).then(r => {
-            chatroom.addReply("r", r.answer);
+            chatroom.addReply(r.answer);
         })
 
     };

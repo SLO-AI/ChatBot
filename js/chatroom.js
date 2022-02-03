@@ -2,6 +2,9 @@ const ChatRoom = function () {
     // const roomElement = document.getElementById("room");
     // const nameElement = document.getElementById("name");
     const chat = document.getElementById("chat");
+    const chatHeader = document.getElementById("chat-header");
+    let username = "Me";
+    let username_friend = "Bot";
 
     const createMessage = (name, message, me=true) => {
         const el = document.createElement("div");
@@ -43,19 +46,20 @@ const ChatRoom = function () {
         return string;
     }
 
-    this.addMessage = (name, message) => {
-        chat.appendChild(createMessage(name, sanitize(message)));
+    this.addMessage = (message) => {
+        chat.appendChild(createMessage(username, sanitize(message)));
         scrollDown();
-    };
+    }
 
-    this.addReply = (name, message) => {
-        chat.appendChild(createMessage(name, sanitize(message), false));
+    this.addReply = (message) => {
+        chat.appendChild(createMessage(username_friend, sanitize(message), false));
         scrollDown();
     }
 
     const init = () => {
-        this.addMessage("W. Alex", "Hey hoe gaat het?");
-        this.addReply("Maxima", "Goed matig");
+        chatHeader.innerHTML =  username_friend;
+        this.addMessage("Hey hoe gaat het?");
+        this.addReply("Goed matig");
     }
 
     init();
