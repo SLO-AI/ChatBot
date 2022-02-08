@@ -17,6 +17,8 @@
 
     --text-area-width: 585px;
 
+    --chat-window-width: 620px;
+
     --border-radius: 10px;
 }
 
@@ -52,6 +54,12 @@ header h1 {
 
 .align-left {
     text-align: left;
+}
+
+#settings {
+    width: var(--chat-window-width);
+    margin: auto;
+    padding: 50px 0;
 }
 
 .message {
@@ -126,7 +134,7 @@ header h1 {
     padding: 15px 20px;
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0px 5px 2px #444444;
+    box-shadow: 0 0 5px 2px #444444;
     font-size: 22px;
     font-weight: bold;
 }
@@ -214,4 +222,19 @@ footer {
     text-align: center;
     background: var(--secondary-blue);
     color: var(--text-color-white);
+}
+
+@media screen and (max-width: 768px) {
+    #settings {
+        width: 90%;
+    }
+
+    #chat-window {
+        width: 90%;
+    }
+
+    #chat {
+        height: 360px;
+    }
+
 }

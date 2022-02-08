@@ -11,6 +11,8 @@ const load = function() {
 
             bot.trainCorpus().then(() => {
                 console.log("Done!");
+                chatroom.clear();
+                chatroom.setChatName(file.name);
             });
         });
     }
@@ -50,7 +52,8 @@ const load = function() {
     new DropArea(document.getElementById("file-drop"), (files) => {
         console.log(files);
         const fr = new FileReader()
-        fr.onload=function(){
+
+        fr.onload = function(){
             const r = JSON.parse(fr.result)
             loadCorpus(r);
         }

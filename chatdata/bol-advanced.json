@@ -3,6 +3,24 @@
   "locale": "nl",
   "data": [
     {
+      "intent": "agent.greeting",
+      "utterances": [
+        "Hallo",
+        "Dag",
+        "Goedemiddag",
+        "Goedenavond",
+        "Goededag",
+        "Goedendag",
+        "Hey",
+        "Hoi"
+      ],
+      "answers": [
+        "Dag! Hoe kan ik je van dienst zijn?",
+        "Hallo! Wat kan ik voor je doen?",
+        "Hey! Heb je een vraag voor mij?"
+      ]
+    },
+    {
       "intent": "agent.waarispakketje",
       "utterances": [
         "Waar is mijn pakketje?",
@@ -40,7 +58,9 @@
         "Kut"
       ],
       "answers": [
-        "Hey! Dat is niet nodig!! Een bot heeft ook gevoelens! 101001110"
+        "Hey! Dat is niet nodig!! Een bot heeft ook gevoelens! 101001110",
+        "Dat vind ik niet netjes.",
+        "Deze actie is gerapporteerd aan mijn eigenaar."
       ]
     },
     {

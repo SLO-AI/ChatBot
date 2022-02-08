@@ -1,10 +1,8 @@
 const ChatRoom = function () {
-    // const roomElement = document.getElementById("room");
-    // const nameElement = document.getElementById("name");
     const chat = document.getElementById("chat");
     const chatHeader = document.getElementById("chat-header");
-    let username = "Me";
-    let username_friend = "Bot";
+    let username = "Ik";
+    let usernameAgent = "Bot";
 
     const createMessage = (name, message, me=true) => {
         const el = document.createElement("div");
@@ -46,20 +44,44 @@ const ChatRoom = function () {
         return string;
     }
 
+    /**
+     * Add a message of the user to the chat.
+     * @param {string} message Message contents. These will get sanitized before addition.
+     */
     this.addMessage = (message) => {
         chat.appendChild(createMessage(username, sanitize(message)));
         scrollDown();
     }
 
+    /**
+     * Add a message of the agent to the chat.
+     * @param {string} message Message contents. These will get sanitized before addition.
+     */
     this.addReply = (message) => {
-        chat.appendChild(createMessage(username_friend, sanitize(message), false));
+        chat.appendChild(createMessage(usernameAgent, sanitize(message), false));
         scrollDown();
     }
 
+    /**
+     * Clear the chat.
+     */
+    this.clear = () => {
+        for (let i = chat.children.length - 1; i >= 0; i--) {
+            chat.removeChild(chat.children[i]);
+        }
+    }
+
+    /**
+     * Set the username of the agent.
+     * @param {string} name New username.
+     */
+    this.setChatName = (name) => {
+        usernameAgent = name;
+        chatHeader.innerHTML = usernameAgent;
+    }
+
     const init = () => {
-        chatHeader.innerHTML =  username_friend;
-        this.addMessage("Hey hoe gaat het?");
-        this.addReply("Goed matig");
+        chatHeader.innerHTML = usernameAgent;
     }
 
     init();
