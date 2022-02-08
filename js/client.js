@@ -11,6 +11,8 @@ const load = function() {
 
             bot.trainCorpus().then(() => {
                 console.log("Done!");
+                chatroom.clear();
+                chatroom.setChatName(file.name);
             });
         });
     }
@@ -21,11 +23,11 @@ const load = function() {
         }
         const content = msg.value;
 
-        chatroom.addMessage("bla", content);
+        chatroom.addMessage(content);
         msg.value = null;
 
         bot.getReply(content).then(r => {
-            chatroom.addReply("r", r.answer);
+            chatroom.addReply(r.answer);
         })
 
     };
@@ -44,6 +46,19 @@ const load = function() {
         r.json().then((r) => {
             loadCorpus(r);
         });
+
+    });
+
+    new DropArea(document.getElementById("file-drop"), (files) => {
+        console.log(files);
+        const fr = new FileReader()
+
+        fr.onload = function(){
+            const r = JSON.parse(fr.result)
+            loadCorpus(r);
+        }
+
+        fr.readAsText(files[0]);
 
     });
 };
