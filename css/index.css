@@ -60,6 +60,22 @@ header h1 {
     width: var(--chat-window-width);
     margin: auto;
     padding: 50px 0;
+    display: flex;
+}
+
+#download-button {
+    background: none;
+    cursor:pointer;
+    font-size: 12px;
+    border: none;
+}
+
+#download-button:hover {
+    filter: invert(50%);
+}
+
+#download-button:active  {
+    filter: invert(80%);
 }
 
 .message {
