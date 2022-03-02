@@ -31,6 +31,11 @@ const Bot = function () {
      */
     this.getReply = async (message) => {
         return await nlp.process(message);
+
+        // Uncomment text below and comment text above to return a fixed reply.
+        // return await new Promise(function(resolve, reject) {
+        //     resolve({ answer: "Antwoord" });
+        // });
     };
 
     const init = () => {
