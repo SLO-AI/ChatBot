@@ -1,0 +1,26 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "Chatbot for the web",
+  "main": "./js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browserdist": "browserify ./js/index.js | terser --compress --mangle > ./js/nlp-bundle.js"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "terser": "^4.6.3"
+  },
+  "dependencies": {
+    "@nlpjs/core": "^4.1.4",
+    "@nlpjs/emoji": "^4.22.7",
+    "@nlpjs/lang-en-min": "^4.1.4",
+    "@nlpjs/neural": "^4.22.7",
+    "@nlpjs/nlp": "^4.2.0",
+    "@nlpjs/nlu": "^4.23.1",
+    "@nlpjs/qna-importer": "^4.22.7",
+    "@nlpjs/similarity": "^4.22.7"
+  }
+}
