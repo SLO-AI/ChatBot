@@ -13,6 +13,8 @@ First install the required packages by running `npm install`
 Then run `npm browserify` to generate the nlp-bundle.js file.
 You can also add extra packages to the nlp-bundle.js by adding them to index.js.
 
+For more information on the nlp.js library, please look at [their github](https://github.com/axa-group/nlp.js/).
+
 ## Hosted on Github
 The website is hosted on [Github](https://slo-ai.github.io/ChatBot).
 

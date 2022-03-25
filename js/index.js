@@ -4,9 +4,13 @@
 // To generate an updated bundle, run the following commands on your computer:
 // npm install
 // npm run browserdist
-const core = require('@nlpjs/core');
-const nlp = require('@nlpjs/nlp');
-const langenmin = require('@nlpjs/lang-en-min');
-const leven = require('@nlpjs/similarity');
+const containerBootstrap = require('@nlpjs/core');
+const Nlp = require('@nlpjs/nlp');
+const LangEn = require('@nlpjs/lang-en-min');
+const LangNl = require('@nlpjs/lang-nl');
+const Request = require('@nlpjs/request-rn');
+const Emoji = require('@nlpjs/emoji');
+const Nlu = require('@nlpjs/nlu');
 
-window.nlpjs = { ...core, ...nlp, ...langenmin, ...leven };
+
+window.nlpjs = { ...containerBootstrap, ...Nlp, ...LangEn, LangNl, ...Request, ...Emoji, ...Nlu };

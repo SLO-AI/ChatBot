@@ -1,4 +1,4 @@
-const {containerBootstrap, Nlp, LangNl, fs, leven} = window.nlpjs;
+const {containerBootstrap, Nlp, LangNl, fs} = window.nlpjs;
 
 const Bot = function () {
     let container = null;
