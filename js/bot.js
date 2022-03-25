@@ -1,8 +1,9 @@
-const {containerBootstrap, Nlp, LangNl, fs} = window.nlpjs;
+const {containerBootstrap, Nlp, NluNeural, LangNl, fs, SentimentAnalyzer, Evaluator, Template, BuiltinDefault, Ner, NluManager, SlotManager, NlgManager} = window.nlpjs;
 
 const Bot = function () {
     let container = null;
     let nlp = null;
+    let sentiment = null;
 
     /**
      * Set the corpus.
@@ -43,9 +44,16 @@ const Bot = function () {
         container.register('fs', fs);
         container.use(Nlp);
         container.use(LangNl);
+        container.register('sentiment-analyzer', SentimentAnalyzer);
+        container.register('Evaluator', Evaluator);
+        container.register('Template', Template);
+        container.register('extract-builtin-??', BuiltinDefault , true);
+        container.register('ner', Ner);
+        container.register('nlg-manager', NlgManager);
 
         nlp = container.get('nlp');
         nlp.settings.autoSave = false;
+        nlp.forceNER = true;
     };
 
     init();

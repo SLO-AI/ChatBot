@@ -6,11 +6,17 @@
 // npm run browserdist
 const containerBootstrap = require('@nlpjs/core');
 const Nlp = require('@nlpjs/nlp');
-const LangEn = require('@nlpjs/lang-en-min');
+const LangEn = require('@nlpjs/lang-en');
 const LangNl = require('@nlpjs/lang-nl');
 const Request = require('@nlpjs/request-rn');
 const Emoji = require('@nlpjs/emoji');
-const Nlu = require('@nlpjs/nlu');
+const NluNeural = require('@nlpjs/nlu');
+const BuiltinDefault = require('@nlpjs/builtin-default');
+const SentimentAnalyzer = require('@nlpjs/sentiment');
+const Eval = require('@nlpjs/evaluator');
+const NlpManager = require('@nlpjs/nlg');
+const SlotManager = require('@nlpjs/slot');
+const Ner = require('@nlpjs/ner');
 
 
-window.nlpjs = { ...containerBootstrap, ...Nlp, ...LangEn, LangNl, ...Request, ...Emoji, ...Nlu };
+window.nlpjs = { ...containerBootstrap, ...Nlp, ...LangEn, LangNl, ...Request, ...Emoji, ...NluNeural, ...BuiltinDefault, ...SentimentAnalyzer, ...Eval, ...Ner, ...NlpManager, ...SlotManager };

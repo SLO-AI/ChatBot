@@ -13,15 +13,22 @@
     "terser": "^4.6.3"
   },
   "dependencies": {
+    "@nlpjs/builtin-default": "^4.22.7",
     "@nlpjs/core": "^4.1.4",
     "@nlpjs/emoji": "^4.22.7",
+    "@nlpjs/evaluator": "^4.22.7",
+    "@nlpjs/lang-en": "^4.22.7",
     "@nlpjs/lang-en-min": "^4.1.4",
     "@nlpjs/lang-nl": "^4.22.7",
+    "@nlpjs/ner": "^4.23.0",
     "@nlpjs/neural": "^4.22.7",
+    "@nlpjs/nlg": "^4.22.7",
     "@nlpjs/nlp": "^4.2.0",
     "@nlpjs/nlu": "^4.23.1",
     "@nlpjs/qna-importer": "^4.22.7",
     "@nlpjs/request-rn": "^4.23.0",
-    "@nlpjs/similarity": "^4.22.7"
+    "@nlpjs/sentiment": "^4.22.7",
+    "@nlpjs/similarity": "^4.22.7",
+    "@nlpjs/slot": "^4.22.17"
   }
 }
